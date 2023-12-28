@@ -1,8 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* Reset */
 html,
 body,
 div,
@@ -91,7 +87,7 @@ video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+/* Reset for older browsers */
 article,
 aside,
 details,
@@ -126,4 +122,121 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* Main Style */
+
+html {
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+body {
+	background: #fcbf49;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Panel */
+
+.pricing-table {
+	background: #fff;
+	border-radius: 10px;
+	padding: 15px 25px;
+	width: 100%;
+	max-width: 960px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.pricing-plan {
+	border-bottom: 1px solid #eae2b7;
+}
+
+.pricing-plan:last-child {
+	border-bottom: none;
+}
+
+.pricing-img {
+	margin-bottom: 25px;
+	max-width: 100%;
+}
+
+.pricing-header,
+.pricing-features-item {
+	color: #888;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+.pricing-features {
+	margin: 50px 0 25px;
+}
+
+.pricing-features-item {
+	font-size: 12px;
+	color: #f77f00;
+	line-height: 1.5;
+	padding: 15px 0;
+	border-top: 1px solid #eae2b7;
+}
+
+.pricing-features-item:last-child {
+	border-bottom: 1px solid #eae2b7;
+}
+
+.pricing-price {
+	color: #f77f00;
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.pricing-button {
+	display: inline-block;
+	border: 1px solid #fcbf49;
+	border-radius: 10px;
+	color: #f77f00;
+	padding: 15px 35px;
+	text-decoration: none;
+	margin: 25px 0;
+	cursor: pointer;
+	transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+	background-color: #ffd29d;
+}
+
+.pricing-button.is-featured {
+	background: #f77f00;
+	color: #fff;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+	background: #fcbf49;
+	color: #fff;
+}
+
+/* Media Queries */
+@media (min-width: 900px) {
+	.pricing-table {
+		flex-direction: row;
+	}
+
+	.pricing-plan {
+		border-bottom: none;
+		border-right: 1px solid #eae2b7;
+		padding: 25px 50px;
+	}
+
+	.pricing-plan:last-child {
+		border-right: none;
+	}
 }
